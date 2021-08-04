@@ -31,8 +31,10 @@ public class TeacherQuerySchoolCard extends HttpServlet {
         JSONObject jsonObject = ServletUtils.getJSONObject(req);
         Teacher card = new TeacherDaoImpl().querySchoolCard(jsonObject.optString("card"));
         System.out.println(card);
-        System.out.println("ss" + card.getSchoolCard());
-        JSONObject jsonObject1 = new JSONObject(card);
+        JSONObject jsonObject1 = new JSONObject();
+        if (card != null){
+            jsonObject1 = new JSONObject(card);
+        }
         ServletUtils.isOk(jsonObject1, card != null);
         resp.getWriter().write(jsonObject1.toString());
     }
