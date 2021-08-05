@@ -35,4 +35,10 @@ public class StudentDaoImpl extends BaseDao implements StudentDao {
         String sql = "select * from student where majorId = ?";
         return queryForList(Student.class, sql, majorId);
     }
+
+    @Override
+    public Student queryStudentSchoolCard(String schoolCard) {
+        String sql = "select * from student where schoolCard = ?";
+        return queryForOne(Student.class,sql,schoolCard);
+    }
 }
