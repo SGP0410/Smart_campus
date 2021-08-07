@@ -36,7 +36,6 @@ public class Student {
      * face
      */
 
-
     private String id;
     private String name;
     private String municipalId;
@@ -58,5 +57,6 @@ public class Student {
     private String nationality;
     private String age;
     private String face;
+    private String clas;
 
 }
