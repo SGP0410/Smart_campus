@@ -14,4 +14,6 @@ public interface ApproveDao {
 
     public List<Approve> queryApprove();
 
+    public int modify(String id,String school);
+
 }

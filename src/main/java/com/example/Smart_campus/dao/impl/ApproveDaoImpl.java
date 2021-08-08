@@ -13,12 +13,12 @@ public class ApproveDaoImpl extends BaseDao implements ApproveDao {
 
     @Override
     public int updateApproveDao(Approve approve) {
-        String sql = "insert into approve(schoolCard,title,grade,idCard,time,state,clas,msg) values(?,?,?,?,?,?,?,?)";
+        String sql = "insert into approve(schoolCard,title,grade,majorId,time,state,clas,msg) values(?,?,?,?,?,?,?,?)";
         return update(sql,
                 approve.getSchoolCard(),
                 approve.getTitle(),
                 approve.getGrade(),
-                approve.getIdCard(),
+                approve.getMajorId(),
                 approve.getTime(),
                 approve.getState(),
                 approve.getClas(),
@@ -29,5 +29,11 @@ public class ApproveDaoImpl extends BaseDao implements ApproveDao {
     public List<Approve> queryApprove() {
         String sql = "select * from approve";
         return queryForList(Approve.class,sql);
+    }
+
+    @Override
+    public int modify(String id, String msg) {
+        String sql = "update approve set msg = ? where id = ?";
+        return update(sql,msg,id);
     }
 }

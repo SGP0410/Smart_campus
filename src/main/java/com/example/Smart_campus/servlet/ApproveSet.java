@@ -43,7 +43,7 @@ public class ApproveSet extends HttpServlet {
                 jsonObject.optString("schoolCard"),
                 jsonObject.optString("title"),
                 jsonObject.optString("grade"),
-                jsonObject.optString("idCard"),
+                jsonObject.optString("majorId"),
                 jsonObject.optString("time"),
                 jsonObject.optString("state"),
                 jsonObject.optString("clas"),

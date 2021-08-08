@@ -18,7 +18,7 @@ public class Approve {
     private String schoolCard;
     private String title;
     private String grade;
-    private String idCard;
+    private String majorId;
     private String time;
     private String state;
     private String clas;
