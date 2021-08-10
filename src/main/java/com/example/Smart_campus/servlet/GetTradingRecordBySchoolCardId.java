@@ -32,7 +32,7 @@ public class GetTradingRecordBySchoolCardId extends HttpServlet {
 
         ServletUtils.isOk(jsonObject1 , tradingRecordList != null);
 
-        response.getWriter().write(jsonObject.toString());
+        response.getWriter().write(jsonObject1.toString());
 
     }
 

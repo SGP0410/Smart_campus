@@ -19,7 +19,13 @@ public class GetTradingSiteById extends HttpServlet {
 
         TradingSite tradingSite = new TradingSiteDaoImpl().queryTradingSiteById(jsonObject.optString("tradingSiteId"));
 
-        JSONObject jsonObject1 = new JSONObject();
+        JSONObject jsonObject1;
+
+        if (tradingSite != null){
+            jsonObject1 = new JSONObject(tradingSite);
+        }else {
+            jsonObject1 = new JSONObject();
+        }
 
         ServletUtils.isOk(jsonObject1 , tradingSite != null);
 

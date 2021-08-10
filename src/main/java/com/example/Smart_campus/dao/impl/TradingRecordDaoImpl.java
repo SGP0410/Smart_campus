@@ -14,7 +14,7 @@ public class TradingRecordDaoImpl extends BaseDao implements TradingRecordDao {
 
     @Override
     public int addTradingRecord(TradingRecord tradingRecord) {
-        String sql = "insert into trading_record values(?,?,?,?,?,?)";
+        String sql = "insert into trading_record(schoolCardId,tradingDate,tradingType,tradingSiteId,tradingAmount,tradingDescription) values(?,?,?,?,?,?)";
         return update(sql , tradingRecord.getSchoolCardId() ,
             tradingRecord.getTradingDate(),
             tradingRecord.getTradingType(),
