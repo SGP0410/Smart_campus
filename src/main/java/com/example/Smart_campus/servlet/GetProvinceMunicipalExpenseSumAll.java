@@ -64,12 +64,15 @@ public class GetProvinceMunicipalExpenseSumAll extends HttpServlet {
             }
             jsonObject1.put("municipalExpenditure" , jsonArray1);
             jsonArray.put(jsonObject1);
+            System.out.println(jsonArray.length());
         }
+        System.out.println("处理完毕");
         ServletUtils.isOk(jsonObject , jsonArray.length() > 0);
+
         jsonObject.put("rows" , jsonArray);
-
+        System.out.println("开始写出");
         response.getWriter().write(jsonObject.toString());
-
+        System.out.println("结束");
     }
 
     @Override

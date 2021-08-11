@@ -4,10 +4,25 @@ import com.example.Smart_campus.bean.TradingSite;
 
 public interface TradingSiteDao {
 
+    /**
+     * 更具消费地点id查询消费地点
+     * @param tradingSiteId
+     * @return
+     */
     public TradingSite queryTradingSiteById(String tradingSiteId);
 
+    /**
+     * 更具消费地点查询消费地点
+     * @param tradingSiteId
+     * @return
+     */
     public TradingSite queryTradingSiteBySite(String site);
 
+    /**
+     * 添加消费地点
+     * @param tradingSite
+     * @return
+     */
     public int addTradingSite(TradingSite tradingSite);
 
 }
