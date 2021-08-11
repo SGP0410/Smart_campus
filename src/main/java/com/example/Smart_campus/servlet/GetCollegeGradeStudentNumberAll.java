@@ -35,8 +35,7 @@ public class GetCollegeGradeStudentNumberAll extends HttpServlet {
         StudentDaoImpl studentDao = new StudentDaoImpl();
 
         for (College college : collegeList) {//学院（系）
-            List<Major> majorList = //专业
-                majorDao.queryMajorByCollegeId(college.getCollegeId());
+            List<Major> majorList = majorDao.queryMajorByCollegeId(college.getCollegeId());
             List<Student> studentList = new ArrayList<>();
             for (Major major : majorList) {
                 studentList.addAll(studentDao.queryStudentByMajorId(major.getId()));

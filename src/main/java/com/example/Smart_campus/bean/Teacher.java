@@ -37,5 +37,6 @@ public class Teacher {
     private String nationality;
     private String age;
     private String face;
+    private String course;
 
 }

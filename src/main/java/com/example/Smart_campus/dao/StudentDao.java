@@ -22,4 +22,12 @@ public interface StudentDao {
 
     public Student queryStudentSchoolCard(String schoolCard);
 
+    public List<Student> queryClassId(String classId);
+
+    public int updateStudent(String id,String yu,String shu,String wai);
+
+    public int updateStudentPoverty(String poverty,String schoolCard);
+
+    public int updateStudentWordNatureId(String wordNatureId,String schoolCard);
+
 }
