@@ -17,7 +17,6 @@ public class ServletUtils {
      * @return 以JSONObject格式返回接收到的数据
      */
     public static void Setting(HttpServletRequest request, HttpServletResponse response){
-
         try {
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");

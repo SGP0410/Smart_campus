@@ -28,7 +28,6 @@ public class GetCollegeAll extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doGet(req,resp);
-
     }
 
     @Override
@@ -39,7 +38,6 @@ public class GetCollegeAll extends HttpServlet {
         if (college != null) {
             jsonObject.put("data",new JSONArray(college));
         }
-
         ServletUtils.isOk(jsonObject , college != null);
         resp.getWriter().write(jsonObject.toString());
     }
