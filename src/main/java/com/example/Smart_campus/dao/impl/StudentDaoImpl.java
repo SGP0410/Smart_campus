@@ -11,11 +11,8 @@ import java.util.List;
  */
 
 public class StudentDaoImpl extends BaseDao implements StudentDao {
-
-
     /**
      * 查询学生表的所有内容
-     *
      * @return
      */
     @Override
@@ -46,5 +43,29 @@ public class StudentDaoImpl extends BaseDao implements StudentDao {
     public int updateStudentAddress(String address, String id) {
         String sql = "update student set address = ? where id = ?";
         return update(sql , address , id);
+    }
+
+    @Override
+    public List<Student> queryClassId(String classId) {
+        String sql = "select * from student where classid = ?";
+        return queryForList(Student.class,sql,classId);
+    }
+
+    @Override
+    public int updateStudent(String id, String yu, String shu, String wai) {
+        String sql = "update student set yu = ? , shu = ?, wai = ? where id = ?";
+        return update(sql,yu,shu,wai,id);
+    }
+
+    @Override
+    public int updateStudentPoverty(String poverty,String schoolCard) {
+        String sql = "update student set povertyStudent = ? where schoolCard = ?";
+        return update(sql,poverty,schoolCard);
+    }
+
+    @Override
+    public int updateStudentWordNatureId(String wordNatureId, String schoolCard) {
+        String sql = "update student set wordNatureId = ? where schoolCard = ?";
+        return update(sql,wordNatureId,schoolCard);
     }
 }

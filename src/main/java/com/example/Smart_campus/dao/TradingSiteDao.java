@@ -12,8 +12,8 @@ public interface TradingSiteDao {
     public TradingSite queryTradingSiteById(String tradingSiteId);
 
     /**
-     * 更具消费地点查询消费地点
-     * @param tradingSiteId
+     *
+     * @param site
      * @return
      */
     public TradingSite queryTradingSiteBySite(String site);

@@ -58,5 +58,6 @@ public class Student {
     private String age;
     private String face;
     private String clas;
+    private String classid;
 
 }

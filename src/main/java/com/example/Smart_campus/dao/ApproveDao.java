@@ -16,4 +16,8 @@ public interface ApproveDao {
 
     public int modify(String id,String school);
 
+    public List<Approve> queryMajorId(String majorid);
+
+    public int updateState(String state,String id);
+
 }

@@ -36,4 +36,16 @@ public class ApproveDaoImpl extends BaseDao implements ApproveDao {
         String sql = "update approve set msg = ? where id = ?";
         return update(sql,msg,id);
     }
+
+    @Override
+    public List<Approve> queryMajorId(String majorid) {
+        String sql = "select * from approve where majorId = ?";
+        return queryForList(Approve.class,sql,majorid);
+    }
+
+    @Override
+    public int updateState(String state, String id) {
+        String sql = "update approve set state = ? where id = ?";
+        return update(sql,state,id);
+    }
 }
