@@ -22,4 +22,6 @@ public interface StudentDao {
 
     public Student queryStudentSchoolCard(String schoolCard);
 
+    public int updateStudentAddress(String address , String id);
+
 }
