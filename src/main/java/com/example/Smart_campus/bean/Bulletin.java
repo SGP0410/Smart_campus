@@ -6,29 +6,18 @@ import lombok.NoArgsConstructor;
 
 /**
  * @author 关鑫
- * @date 2021/8/9 10:00 星期一
+ * @date 2021/8/19 16:29 星期四
+ * @Description com.example.Smart_campus.bean
  */
-
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class Feedback {
-
-    /**
-     * id
-     * title
-     * msg
-     * time
-     * state
-     * schoolCard
-     */
+@NoArgsConstructor
+public class Bulletin {
 
     private String id;
     private String title;
     private String msg;
     private String time;
-    private String state;
-    private String schoolCard;
-
+    private String faculty;
 
 }

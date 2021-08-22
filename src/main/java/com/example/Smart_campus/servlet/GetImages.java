@@ -22,16 +22,15 @@ public class GetImages extends HttpServlet {
         ImageDaoImpl imageDao = new ImageDaoImpl();
         List<Image> imageList = imageDao.queryImageAll();
         JSONObject jsonObject1 = new JSONObject();
-        if (imageList != null){
-            for (Image image :
-                    imageList) {
+        if (imageList != null) {
+            for (Image image : imageList) {
                 String imageUrl = ServletUtils.getImageUrl(request, image.getName());
                 image.setName(imageUrl);
             }
-            jsonObject1.put("rows" , new JSONArray(new Gson().toJson(imageList)));
+            jsonObject1.put("rows", new JSONArray(new Gson().toJson(imageList)));
         }
 
-        ServletUtils.isOk(jsonObject1 , imageList != null);
+        ServletUtils.isOk(jsonObject1, imageList != null);
 
         response.getWriter().write(jsonObject1.toString());
     }

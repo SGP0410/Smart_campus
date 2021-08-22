@@ -13,12 +13,13 @@ public class FeedbackDaoImpl extends BaseDao implements FeedbackDao {
 
     @Override
     public int addFeedback(Feedback feedback) {
-        String sql = "insert into feedback(title,msg,time,state) values(?,?,?,?)";
+        String sql = "insert into feedback(title,msg,time,state,schoolCard) values(?,?,?,?,?)";
         return update(sql,
                 feedback.getTitle(),
                 feedback.getMsg(),
                 feedback.getTime(),
-                feedback.getState()
+                feedback.getState(),
+                feedback.getSchoolCard()
         );
     }
 
